@@ -45,9 +45,9 @@
 
 
 -(BOOL)editCell:(GW_EditCell *)editCell canSwipeRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row %4 == 0) {
-        return NO;
-    }
+//    if (indexPath.row %4 == 0) {
+//        return NO;
+//    }
     return YES;
 }
 
@@ -59,7 +59,7 @@
         case 0:{
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
             btn.frame = CGRectMake(0, 0, 120, editCell.frame.size.height);
-            btn.backgroundColor = [UIColor redColor];
+            [btn setBackgroundImage:[UIImage imageNamed:@"testImage"] forState:UIControlStateNormal];
             [btn setTitle:@"test1" forState:UIControlStateNormal];
             
             UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -72,8 +72,7 @@
         case 1:{
             UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
             btn.frame = CGRectMake(0, 0, 60, editCell.frame.size.height);
-            btn.backgroundColor = [UIColor blueColor];
-            [btn setTitle:@"test2" forState:UIControlStateNormal];
+            [btn setImage:[UIImage imageNamed:@"testImage"] forState:UIControlStateNormal];
             
             UIButton *btn2 = [UIButton buttonWithType:UIButtonTypeCustom];
             btn2.frame = CGRectMake(CGRectGetMaxX(btn.bounds), 0, 60, editCell.frame.size.height);
